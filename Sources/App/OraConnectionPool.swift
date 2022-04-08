@@ -14,7 +14,7 @@ public struct OraConnectionPool {
     
     init(tnsAlias: String, username: String, password: String, maxConn: Int) {
         let oracleService = OracleService(from_string: tnsAlias)
-        pool = ConnectionPool(service: oracleService, user: username, pwd: password, maxConn: maxConn)
+        pool = try! ConnectionPool(service: oracleService, user: username, pwd: password, maxConn: maxConn)
         pool.timeout = 180
         print("connection pool created with \(pool.openedCount) open connections")
     }
