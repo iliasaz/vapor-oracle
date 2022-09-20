@@ -142,7 +142,7 @@ func routes(_ app: Application) throws {
             throw DatabaseErrors.SQLError(DatabaseError(OCI_GetLastError()))
         }
         
-        responseString += "out_value: \(value2)\n"  //prints out the 0 from above, doesn't display the corresponding code from the db
+        responseString += "out_value: \(value2)\n"  //prints 25 - the result of the function
         return responseString
     }
     
