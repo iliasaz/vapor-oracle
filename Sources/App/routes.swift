@@ -6,7 +6,9 @@ import cocilib
 let prefetchSize: Int = 100
 
 func routes(_ app: Application) throws {
-
+    try app.register(collection: UserController())
+    try app.register(collection: UserController2())
+    
     app.get("get") { req -> String in
         var responseString = ""
         req.logger.debug("get request received")
