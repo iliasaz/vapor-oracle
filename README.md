@@ -13,3 +13,5 @@ The following environment variables should be configured:
 - DATABASE_USER=db_user
 - DATABASE_PASSW=db_password
 - LOG_LEVEL=debug, trace, info - see Vapor docs
+
+Added two examples of Basic Authentication using database stored credentials and a connection pool
